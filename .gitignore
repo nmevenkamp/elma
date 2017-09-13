@@ -1,0 +1,14 @@
+*.o
+*.a
+Makefile
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+cmake_install.cmake
+CTestTestfile.cmake
+build
+
+selfTest
+simplexSelfTest
+sparsetest

@@ -1,0 +1,6 @@
+SET ( SELECTED_MODULES modules/aol modules/quoc )
+SET ( SELECTED_PROJECTS )
+
+SET (SELECTED_STDPROJECTS
+	 selfTest/aol
+	 selfTest/quoc)
