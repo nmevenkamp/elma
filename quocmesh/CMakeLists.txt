@@ -100,7 +100,7 @@ IF ( CMAKE_COMPILER_IS_GNUCXX )
 
   ADD_DEFINITIONS ( -fmessage-length=0 -DGNU -Wcast-qual -Wall -Wextra -Wno-conversion -Winit-self -Wcast-align -Wundef -Wswitch-default -Wredundant-decls -pedantic )
   # The following flags are only valid for C++.
-  SET ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast -Woverloaded-virtual -Wnon-virtual-dtor" )
+  SET ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast -Woverloaded-virtual -Wnon-virtual-dtor -fext-numeric-literals" )
   IF ( NOT MINGW )
     ADD_DEFINITIONS ( -fPIC -ansi )
 
