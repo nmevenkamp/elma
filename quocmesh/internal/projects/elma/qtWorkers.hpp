@@ -12,7 +12,7 @@
 #include <emNonLocalMeansFilter.h>
 #include <emBM3DFilter.h>
 #include <atomFinder.h>
-#include <aspectratiopixmaplabel.hpp>
+#include <aspectRatioPixmapLabel.hpp>
 
 
 class QtProgressBar;
