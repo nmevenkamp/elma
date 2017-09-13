@@ -12,3 +12,6 @@ build
 selfTest
 simplexSelfTest
 sparsetest
+quocELMA/external
+quocELMA/internal
+quocELMA/examples
