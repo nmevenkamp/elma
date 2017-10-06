@@ -1,4 +1,4 @@
-#include "aspectratiopixmaplabel.hpp"
+#include "aspectRatioPixmapLabel.hpp"
 #include <aol.h>
 
 // Based on AspectRatioPixmapLabel from http://stackoverflow.com/questions/8211982/qt-resizing-a-qlabel-containing-a-qpixmap-while-keeping-its-aspect-ratio

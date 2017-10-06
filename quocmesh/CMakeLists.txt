@@ -4,6 +4,9 @@
 CMAKE_MINIMUM_REQUIRED ( VERSION 2.8 )
 
 PROJECT ( quocmesh )
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 11)
+
 
 ENABLE_TESTING()
 
@@ -90,7 +93,6 @@ IF ( CMAKE_COMPILER_IS_GNUCXX )
   OPTION ( PARSE_GCC_ERRORS "Make cmake use our GCC error parsing script like colorize.pl" ON )
   IF ( PARSE_GCC_ERRORS )
     #  To let the script know where the source and thus the error parse scripts are sneak in the path as argument.
-    SET_PROPERTY ( GLOBAL PROPERTY RULE_LAUNCH_COMPILE "bash ${CMAKE_CURRENT_SOURCE_DIR}/util/cmakeParseError.sh ${CMAKE_CURRENT_SOURCE_DIR}" )
   ENDIF ( )
 
   # Figure out which GCC version we are using.
@@ -98,7 +100,7 @@ IF ( CMAKE_COMPILER_IS_GNUCXX )
 
   ADD_DEFINITIONS ( -fmessage-length=0 -DGNU -Wcast-qual -Wall -Wextra -Wno-conversion -Winit-self -Wcast-align -Wundef -Wswitch-default -Wredundant-decls -pedantic )
   # The following flags are only valid for C++.
-  SET ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast -Woverloaded-virtual -Wnon-virtual-dtor" )
+  SET ( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wold-style-cast -Woverloaded-virtual -Wnon-virtual-dtor -fext-numeric-literals" )
   IF ( NOT MINGW )
     ADD_DEFINITIONS ( -fPIC -ansi )
 
@@ -882,7 +884,7 @@ IF ( CMAKE_COMPILER_IS_GNUCXX )
   IF ( NOT ( ${QUOC_GCC_VERSION} VERSION_LESS 4.6 ) )
     #! \cmakeoption{Use C++11,OFF}
     #! \note for gcc compiler version 4.7 or greater or Clang only
-    OPTION ( USE_C++11 "Make the new c++ standard available" OFF )
+    OPTION ( USE_C++11 "Make the new c++ standard available" ON )
     IF ( USE_C++11 )
       # setting CMAKE_CXX_FLAGS does not work
       IF ( ${QUOC_GCC_VERSION} VERSION_LESS 4.7 )

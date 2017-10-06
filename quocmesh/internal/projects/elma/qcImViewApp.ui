@@ -350,7 +350,7 @@
   <customwidget>
    <class>AspectRatioPixmapLabel</class>
    <extends>QLabel</extends>
-   <header>aspectratiopixmaplabel.hpp</header>
+   <header>aspectRatioPixmapLabel.hpp</header>
   </customwidget>
  </customwidgets>
  <resources/>

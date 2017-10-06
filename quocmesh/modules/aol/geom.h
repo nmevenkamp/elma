@@ -787,14 +787,15 @@ public:
       intersec._pt1[0] = pts[0][0];
       intersec._pt1[1] = pts[0][1];
     }
-    if ( pts.numComponents ( ) == 2 ) {
-      intersec._pt2[0] = pts[1][0];
-      intersec._pt2[1] = pts[1][1];
-    } else {
+    if (pts.numComponents() == 1) {
       intersec._pt2[0] = pts[0][0];
       intersec._pt2[1] = pts[0][1];
     }
-    
+    if ( pts.numComponents ( ) == 2 ) {
+      intersec._pt2[0] = pts[1][0];
+      intersec._pt2[1] = pts[1][1];
+    }
+
     return pts.numComponents ( );
   }
   
